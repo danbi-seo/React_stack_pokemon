@@ -1,12 +1,42 @@
-# React + Vite
+# 리액트 애플리케이션 개발 및 최적화
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## **주제**: 리액트 애플리케이션 개발 및 최적화
 
-Currently, two official plugins are available:
+### **학습 목표**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. **리액트와 Vite**: Vite를 사용하여 리액트 프로젝트를 설정하고 최적화된 개발 환경을 구성합니다.
+2. **Redux Toolkit (RTK)**: 포켓몬 정보를 관리하기 위해 Redux Toolkit을 사용하여 상태 관리 및 비동기 로딩을 구현합니다.
+3. **동적 로딩 및 최적화**: `React.lazy`와 `React.Suspense`를 사용하여 동적 로딩을 구현하고, 초기 렌더링 성능을 개선합니다.
+4. **라우팅 및 UI 구성**: `react-router-dom`을 사용하여 페이지 라우팅을 설정하고, Tailwind CSS를 활용하여 UI를 스타일링합니다.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## **복습할 개념 체크 리스트**
+
+- [ ] **Vite와 리액트 설정**
+    - Vite를 사용하여 리액트 프로젝트를 시작하고 구성하는 방법을 복습하세요.
+- [ ] **Redux Toolkit 사용**
+    - `createSlice`, `configureStore`, `createAsyncThunk`를 사용하여 Redux 상태를 관리하고 비동기 데이터 로딩을 처리하는 방법을 복습하세요.
+- [ ] **동적 로딩 (`React.lazy`와 `React.Suspense`)**
+    - `React.lazy`를 사용하여 컴포넌트를 동적으로 로드하고, `React.Suspense`를 사용하여 로딩 상태를 처리하는 방법을 복습하세요.
+- [ ] **라우팅 및 페이지 구성**
+    - `react-router-dom`을 사용하여 애플리케이션의 페이지를 라우팅하고, `routes`와 `Route` 컴포넌트를 활용하여 페이지를 구성하는 방법을 복습하세요.
+- [ ] **Tailwind CSS 스타일링**
+    - Tailwind CSS를 사용하여 리액트 애플리케이션의 UI를 스타일링하는 방법을 복습하세요.
+
+---
+
+## **기본 요구 사항**
+
+### 1. **리액트 프로젝트 설정**
+
+1. **Vite를 사용해 리액트 프로젝트 생성**
+    - Vite를 사용하여 새로운 리액트 프로젝트를 설정합니다.
+
+### 2. **Redux Toolkit 설정**
+
+1. **RTK 폴더 생성**
+    - `RTK` 폴더를 생성하고, 포켓몬 정보를 비동기적으로 가져오는 로직을 구현합니다.
+2. **비동기 데이터 로딩**
+    - `fetchAPI`를 사용하여 포켓몬의 이름, 이미지(앞면/뒷면), 설명을 받아옵니다.
+    - `Array.from`을 사용하여 1부터 151까지의 포켓몬 ID 배열을
