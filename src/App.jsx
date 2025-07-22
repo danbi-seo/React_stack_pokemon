@@ -7,8 +7,10 @@ import Main from './pages/Main'
 import Detail from './pages/Detail'
 import Search from './pages/Search'
 import Favorite from './pages/Favorite'
+import { useNavigate } from 'react-router-dom'
 
 function App() {
+  const navigate = useNavigate()
   const dispatch = useDispatch()
 
   useEffect(() => {
@@ -20,9 +22,11 @@ function App() {
       <h1 className='text-[40px] text-center'>포켓몬 도감</h1>
       <nav className='flex gap-[10px] justify-center'>
         <Link to={'/'}>메인</Link>
-        <Link to={'/detail/1 '}>상세정보</Link>
-        <Link to={'/search'}>검색</Link>
         <Link to={'/favorite'}>찜목록</Link>
+        <div>
+          <input onChange={(e) => navigate(`/search?pokemon=${e.target.value}`)} className='border-b border-[darkgray] px-2'/>
+          <span>🔍</span>
+        </div>
       </nav>
       <main className='flex flex-wrap justify-center gap-[20px] pt-[30px]'>
         <Routes>
