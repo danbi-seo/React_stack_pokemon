@@ -1,5 +1,6 @@
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
 import { useState } from "react"
+
 
 const FlipImageContainer = styled.div`
   width: 200px;
@@ -27,12 +28,12 @@ const BackImage = styled.img`
 export default function FlipCard({ front, back }){
   const [flipped, setFlipped] = useState(false)
   return(
-    <>
+    <div className="flex flex-col justify-center ml-[20px]">
+      <button onClick={() => setFlipped(prev => !prev)}>뒤집기</button> 
       <FlipImageContainer flipped={flipped ? 'flip' : ''}>
         <FrontImage src={front}/>
         <BackImage src={back}/>
       </FlipImageContainer>
-      <button onClick={() => setFlipped(prev => !prev)}>뒤집기</button>
-    </>
+    </div> 
   )
 }
