@@ -28,8 +28,10 @@ const BackImage = styled.img`
 export default function FlipCard({ front, back }){
   const [flipped, setFlipped] = useState(false)
   return(
-    <div className="flex flex-col justify-center ml-[20px]">
-      <button onClick={() => setFlipped(prev => !prev)}>뒤집기</button> 
+    <div className="flex flex-col justify-center items-center ml-[20px]">
+      <button onClick={() => setFlipped(prev => !prev)}
+        className="w-1/3 flex justify-center items-center py-[5px] px-[10px] bg-white/90 rounded-[8px] shadow-[0_-2px_5px_rgba(0,0,0,0.05)]">
+        뒤집기</button> 
       <FlipImageContainer flipped={flipped ? 'flip' : ''}>
         <FrontImage src={front}/>
         <BackImage src={back}/>
