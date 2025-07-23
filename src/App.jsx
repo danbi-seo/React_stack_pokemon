@@ -12,7 +12,6 @@ const Search = lazy(() => import('./pages/Search'))
 const Favorite = lazy(() => import('./pages/Favorite'))
 
 
-
 function App() {
   const navigate = useNavigate()
   const dispatch = useDispatch()
@@ -28,7 +27,7 @@ function App() {
         <Link to={'/'}>메인</Link>
         <Link to={'/favorite'}>나의포켓볼</Link>
         <div>
-          <input onChange={(e) => navigate(`/search?pokemon=${e.target.value}`)} className='border-b border-[darkgray] px-2'/>
+          <input onChange={(e) => navigate(`/search?pokemon=${e.target.value}`)} className='border-b border-[darkgray] px-2 w-30'/>
           <span>🔍</span>
         </div>
       </nav>
